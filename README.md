@@ -1,2 +1,6 @@
 # docker_templates
-Manage Docker Templates
+
+```
+docker-compose up -d
+docker exec -it mysql bash
+```
