@@ -1,0 +1,3 @@
+/services/mysql/db/*
+/services/mysql/initdb.d/*
+!.gitkeep
