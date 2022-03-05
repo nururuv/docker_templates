@@ -59,6 +59,7 @@ production:
   database: myapp_production
   username: myapp
   password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>
+
 ```
 
 ```
@@ -69,5 +70,5 @@ docker-compose run web rake db:create
 ### 3.アプリケーション起動
 
 ```
-doccker-compose up
+docker-compose up
 ```
