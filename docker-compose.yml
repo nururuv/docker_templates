@@ -9,9 +9,10 @@ services:
       - "3306:3306"
     environment:
       MYSQL_ROOT_PASSWORD: Mysql@9999
+      MYSQL_ROOT_HOST: "%"
     volumes:
-      - ./services/mysql/initdb.d:/docker-entrypoint-initdb.d #初期処理のフォルダ。初回起動のみでおｋ
-      - ./services/mysql/db:/var/lib/mysql #データの永続化
+      - ./services/mysql/initdb.d:/docker-entrypoint-initdb.d # 初期処理のフォルダ。初回起動のみでおｋ
+      - ./services/mysql/db:/var/lib/mysql # データの永続化
 
   web:
     build: ./services/web/
@@ -20,5 +21,6 @@ services:
       - ./services/web:/myapp
     ports:
       - "3000:3000"
+    # 先にmysqlコンテナを起動する
     depends_on:
       - mysql

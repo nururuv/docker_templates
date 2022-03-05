@@ -4,7 +4,7 @@ FROM ruby:2.7.1
 RUN apt-get update -qq 
 
 # nodejs
-RUN curl -sL https://rpm.nodesource.com/setup_12.x | sh - 
+RUN curl -fsSL https://deb.nodesource.com/setup_14.x | bash -
 RUN apt-get install -y nodejs
 
 # yarn
